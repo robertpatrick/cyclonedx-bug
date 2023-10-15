@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Copyright (c) 2017, 2023, Oracle Corporation and/or its affiliates.
-    Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
--->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -16,7 +12,7 @@
     </parent>
 
     <dependencies>
-        <!-- Need to resolve Jython classes at compile time.  At runtime, WLST will provide the classes. -->
+        <!-- Need to resolve Jython classes at compile time. -->
         <dependency>
             <groupId>org.python</groupId>
             <artifactId>jython</artifactId>
@@ -24,34 +20,4 @@
         </dependency>
     </dependencies>
 
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>io.rhpatrick.mojo</groupId>-->
-<!--                <artifactId>wlst-test-maven-plugin</artifactId>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>python-tests</id>-->
-<!--                        <goals>-->
-<!--                            <goal>test</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <skipTests>${skipTests}</skipTests>-->
-<!--                            <wlstScriptDirectory>${unit-test-wlst-dir}</wlstScriptDirectory>-->
-<!--                            <wlstExtClasspath>-->
-<!--                                <element>org.antlr:antlr4-runtime:jar</element>-->
-<!--                                <element>org.yaml:snakeyaml:jar</element>-->
-<!--                            </wlstExtClasspath>-->
-<!--                            <systemProperties>-->
-<!--                                <unit-test-wlst-dir>${unit-test-wlst-dir}</unit-test-wlst-dir>-->
-<!--                            </systemProperties>-->
-<!--                            <environmentVariables>-->
-<!--                                <WDT_CUSTOM_CONFIG>${project.build.directory}/unit-tests/wdt-config</WDT_CUSTOM_CONFIG>-->
-<!--                            </environmentVariables>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
 </project>
